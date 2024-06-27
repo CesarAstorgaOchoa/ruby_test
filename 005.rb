@@ -8,10 +8,9 @@ def read_from_user
 end
 
 def convert_to_array(word)
-  text = word.split(/\A.{0,3}[a-z]\b/mi)
+  text = word.split(/\A.{0,9}[a-z]\b/mi)
   print text
 end
-
 
 input = read_from_user
 convert_to_array(input)
