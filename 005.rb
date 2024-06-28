@@ -27,7 +27,7 @@ def create_text_array(array)
 end
 
 def is_max_characters?(new_string, word)
-  true if new_string.size + word.size + 1 > 140
+  new_string.size + word.size + 1 > 140
 end
 
 def print_array(text_array)
