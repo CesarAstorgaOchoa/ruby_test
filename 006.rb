@@ -1,9 +1,15 @@
 # Escriba un algoritmo que tome un texto de un API y devuelva un string
 # similar pero con la primer letra de cada palabra en mayúscula.
 
-def temporal_api
-  text = "el sentido de la birria"
+require 'httparty'
+
+def get_text
+  @url = 'https://devartiral.com/zote_api/random'
+  @json = HTTParty.get(@url, verify: false)
+  @text = @json["precept"]
 end
+
+@text = get_text
 
 def to_array(text)
   array_text = text.split
@@ -18,14 +24,20 @@ def uppercase_string(text_array)
 end
 
 def uppercase_letter(word)
-  word.capitalize
+  word.capitalize! if letter?(word)
+  word
+end
+
+
+
+def letter?(word)
+  word.start_with?(/[[:alpha:]]/)
 end
 
 def print_string(string)
   puts string
 end
 
-text = temporal_api
-string_array = to_array(text)
+string_array = to_array(@text)
 new_string = uppercase_string(string_array)
 print_string(new_string)
