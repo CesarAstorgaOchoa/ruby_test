@@ -11,25 +11,8 @@ end
 
 @text = get_text
 
-def to_array(text)
-  array_text = text.split
-end
-
-def uppercase_string(text_array)
-  new_string = ''
-  text_array.each do |word|
-    new_string += uppercase_letter(word) + ' '
-  end
-  new_string
-end
-
-def uppercase_letter(word)
-  word.capitalize! unless already_upcase?(word)
-  word
-end
-
-def already_upcase?(word)
-  word[0] == word[0].upcase
+def uppercase_text(text)
+  text.split.map(&:capitalize).join(' ')
 end
 
 def print_string(string)
@@ -37,6 +20,5 @@ def print_string(string)
   puts string
 end
 
-string_array = to_array(@text)
-new_string = uppercase_string(string_array)
-print_string(new_string)
+string_array = uppercase_text(@text)
+print_string(string_array)
