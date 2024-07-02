@@ -7,23 +7,17 @@ def read_from_user
   input = gets.chomp
 end
 
-def separate_words(string)
-  array_words = string.split('_')
+def to_uppercase_array(text)
+  text.split('_').map(&:capitalize)
 end
 
-def to_camel_case(array_words)
-  camel_case = array_words[0].downcase
-  i = 1
-  until i >= array_words.size do
-    camel_case += uppercase_first_letter(array_words[i])
-    i += 1
-  end
-  camel_case
+def to_downcase(array)
+  array[0].downcase
 end
 
-def uppercase_first_letter(word)
-  word = word.capitalize
-  word
+def convert_camel_case(array)
+  array[0] =  to_downcase(array)
+  array.join
 end
 
 def print_result(result)
@@ -31,6 +25,6 @@ def print_result(result)
 end
 
 text = read_from_user
-words_array = separate_words(text)
-camel_case = to_camel_case(words_array)
+array = to_uppercase_array(text)
+camel_case = convert_camel_case(array)
 print_result(camel_case)
