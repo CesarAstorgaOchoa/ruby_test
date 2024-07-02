@@ -24,17 +24,16 @@ def uppercase_string(text_array)
 end
 
 def uppercase_letter(word)
-  word.capitalize! if letter?(word)
+  word.capitalize! unless already_upcase?(word)
   word
 end
 
-
-
-def letter?(word)
-  word.start_with?(/[[:alpha:]]/)
+def already_upcase?(word)
+  word[0] == word[0].upcase
 end
 
 def print_string(string)
+  puts @text
   puts string
 end
 
