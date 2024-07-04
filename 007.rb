@@ -16,7 +16,7 @@ def to_downcase(array)
 end
 
 def convert_camel_case(array)
-  array[0] =  to_downcase(array)
+  array[0] = to_downcase(array)
   array.join
 end
 

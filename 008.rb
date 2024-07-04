@@ -6,3 +6,26 @@
 #       #$%&/()!?._-,+*
 # 4.- Debe de tener por lo menos una mayúscula.
 # 5.- Debe de tener por lo menos una minúscula.
+
+def uppercase_characters
+  ('A'..'Z').to_a.sample
+end
+
+def lowercase_characters
+  ('a'..'z').to_a.sample(5).join
+end
+
+def number_characters
+  ('0'..'9').to_a.sample
+end
+
+def special_characters
+  '#$%&/()!?._-,+*'.split('').sample
+end
+
+def random_password
+  password_string = lowercase_characters + uppercase_characters + number_characters + special_characters
+  password_string.split('').shuffle.join
+end
+
+puts "password: #{random_password}"
