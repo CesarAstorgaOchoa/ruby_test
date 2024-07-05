@@ -24,7 +24,8 @@ def special_characters
 end
 
 def random_password
-  password_string = lowercase_characters + uppercase_characters + number_characters + special_characters
+  password_string = lowercase_characters + uppercase_characters
+    + number_characters + special_characters
   password_string.split('').shuffle.join
 end
 
