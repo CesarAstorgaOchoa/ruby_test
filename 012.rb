@@ -8,7 +8,7 @@ def subtract_values(value_one, value_two)
 end
 
 def square_number(number)
-  number ** 2
+  number**2
 end
 
 def sum_values(first_value, second_value)
