@@ -12,5 +12,5 @@ def factorial(end_number, start_number = 1)
   factorial(end_number, start_number) if start_number < end_number
 end
 
-factorial(4)
+factorial(0)
 puts @result
