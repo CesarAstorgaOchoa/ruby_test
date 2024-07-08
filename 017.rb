@@ -6,11 +6,11 @@ def read_from_user
   input = gets.chomp.to_i
 end
 
-def grad_to_rad(grad)
+def rad_to_grad(grad)
   grad * (180/Math::PI)
 end
 
 grad = read_from_user
-rad = grad_to_rad(grad)
+rad = rad_to_grad(grad)
 
-puts "Angulo en radianes #{rad}"
+puts "Angulo en grados #{rad}"
