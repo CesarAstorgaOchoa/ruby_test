@@ -8,3 +8,10 @@
 # 3° = 0.052335956242943835
 # 4° = 0.0697564737441253
 # ...
+
+
+def print_sin_values
+  (0..359).map{ |num| puts "#{num}° = #{Math.sin(num)}" }
+end
+
+print_sin_values
