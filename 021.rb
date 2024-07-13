@@ -1,6 +1,8 @@
 # Escriba un algoritmo que devuelva el valor en hexadecimal del valor en
 # decimal ingresado por el usuario.
 
+#nota: existe el to string a base 16 == HEX, checar despues
+
 @hex_numbers = { 'A' => 10, 'B' => 11, 'C' => 12,
   'D' => 13, 'E' => 14, 'F' => 15  }
 
