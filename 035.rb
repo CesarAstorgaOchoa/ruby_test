@@ -6,3 +6,12 @@
 # imprimir en su lugar, la palabra "bizzbuzz".
 
 puts 'Bizz-buzz Game!'
+
+(1..100).each do |num|
+  message = ''
+
+  message += 'bizz' if num % 3 == 0
+  message += 'buzz' if num % 5 == 0
+
+  puts "#{num} #{message}"
+end
