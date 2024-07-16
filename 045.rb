@@ -12,7 +12,8 @@
 # * * * * * * * * * * * *
 
 def read_from_user
-  input = 10
+  print 'Ingrese un numero: '
+  input = gets.chomp.to_i
 end
 
 def printer(number)
