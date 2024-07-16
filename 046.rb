@@ -8,3 +8,15 @@
 #   * *
 #  * * *
 # * * * *
+
+def read_from_user
+  print 'Ingrese un numero: '
+  input = gets.chomp.to_i
+end
+
+def printer(number)
+  (1..number).each { |value| puts ' ' * (number-value) + '* '*value }
+end
+
+number = read_from_user
+printer(number)
