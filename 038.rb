@@ -23,3 +23,5 @@
   534741,
   506243
 ]
+
+puts (@array.sum.to_f / @array.size.to_f)
