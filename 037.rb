@@ -3,4 +3,5 @@
 
 @array = [230, 999, 112, 666, 190, 725, 283, 670]
 
-@array.min
+puts @array.min
+
