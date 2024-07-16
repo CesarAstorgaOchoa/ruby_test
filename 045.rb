@@ -10,3 +10,14 @@
 #     * * * * * * * *
 #   * * * * * * * * * *
 # * * * * * * * * * * * *
+
+def read_from_user
+  input = 10
+end
+
+def printer(number)
+  (1..number).each { |value| puts ' '*(number-value) + '*'*(2*value) }
+end
+
+num = read_from_user
+printer(num)
